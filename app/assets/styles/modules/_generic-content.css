@@ -3,6 +3,7 @@
         line-height: 1.65;
         margin: 0 0 1.8em 0;
         letter-spacing: 0.05rem;
+        max-width: 75rem;
 
         a {
             font-weight: 700;

@@ -42,10 +42,6 @@
         }
     }
 
-    &--align-vertical {
-        align-items: center;
-    }
-
     &--u-narrow-top {
         margin-top: 0;
     }

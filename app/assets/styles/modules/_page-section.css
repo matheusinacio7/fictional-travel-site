@@ -6,7 +6,7 @@
         margin-top: 0;
     }
 
-    .row:last-child {
+    .row:last-of-type {
         margin-bottom: 0;
     }
 
@@ -18,6 +18,11 @@
     &--blue {
         background-color: $mainBlue;
         color: #ffffff;
+    }
+
+
+    &--testimonials {
+        background-color: #e0e6ef;
     }
 }
 
@@ -46,6 +51,20 @@
         strong {
             font-weight: 700;
         }
+
+        &--orange {
+            color: $mainOrange;
+        }
+        
+        &--blue {
+            color: $mainBlue;
+        }
     }
 
+}
+
+body {
+    .page-section:last-of-type {
+        padding-bottom: 0;
+    }
 }
