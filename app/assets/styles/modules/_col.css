@@ -1,67 +1,54 @@
 .col {
     flex: 1;
 
-    &-1 {
-        margin-top: 0;
+    &--m {
         @mixin atMedium {
-            flex: 1;
+            margin-top: 0;
+            margin-bottom: 0;
         }
+    }
+
+    &--l {
+        @mixin atLarge {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    &-1 {
+        flex: 1;
     }
 
     &-2 {
-        margin-top: 0;
-        @mixin atMedium {
-            flex: 2;
-        }
+        flex: 2;
     }
 
     &-3 {
-        margin-top: 0;
-        @mixin atMedium {
-            flex: 3;
-        }
+        flex: 3;
     }
 
     &-4 {
-        margin-top: 0;
-        @mixin atMedium {
-            flex: 4;
-        }
+        flex: 4;
     }
 
     &-6 {
-        margin-top: 0;
-        @mixin atMedium {
-            flex: 6;
-        }
+        flex: 6;
     }
 
     &-8 {
-        margin-top: 0;
-        @mixin atMedium {
-            flex: 8;
-        }
+        flex: 8;
     }
 
     &-9 {
-        margin-top: 0;
-        @mixin atMedium {
-            flex: 9;
-        }
+        flex: 9;
     }
 
     &-10 {
-        margin-top: 0;
-        @mixin atMedium {
-            flex: 10;
-        }
+        flex: 10;
     }
 
     &-11 {
-        margin-top: 0;
-        @mixin atMedium {
-            flex: 11;
-        }
+        flex: 11;
     }
 
     &--center {

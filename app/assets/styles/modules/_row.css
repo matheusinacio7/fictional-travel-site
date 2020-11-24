@@ -24,6 +24,11 @@
                 margin-right: 5em;
             }
 
+            .row {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -34,6 +39,11 @@
         @mixin atLarge {
             .col {
                 margin-right: 5em;
+            }
+
+            .row {
+                margin-top: 0;
+                margin-bottom: 0;
             }
 
             display: flex;
@@ -47,9 +57,15 @@
 
         .col {
             display: flex;
+            margin-bottom: 3em;
+
+            @mixin atMedium {
+                margin-bottom: 4em;
+            }
         }
 
         .col:last-of-type {
+            display: flex;
             margin-bottom: 3em;
 
             @mixin atMedium {
