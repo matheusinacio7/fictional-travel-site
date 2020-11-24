@@ -30,6 +30,34 @@
         }
     }
 
+    &--l {
+        @mixin atLarge {
+            .col {
+                margin-right: 5em;
+            }
+
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+
+    &--justify-bottom {
+        align-items: stretch;
+
+        .col {
+            display: flex;
+        }
+
+        .col:last-of-type {
+            margin-bottom: 3em;
+
+            @mixin atMedium {
+                margin-bottom: 4em;
+            }
+        }
+    }
+
     &--gutter-u-narrow {
         .col {
             margin-right: 1em;
@@ -40,10 +68,6 @@
         .col {
             margin-right: 2em;
         }
-    }
-
-    &--align-vertical {
-        align-items: center;
     }
 
     &--u-narrow-top {

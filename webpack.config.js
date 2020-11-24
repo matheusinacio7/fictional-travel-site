@@ -42,7 +42,11 @@ module.exports = {
                         plugins: POST_CSS_PLUGINS
                     }}}
                     ]
-            }
-        ]
-    }
+            },
+            {
+                test: /\.(png|jpg)$/,
+                loader: 'url-loader',
+            },
+        ],
+    },
 }
