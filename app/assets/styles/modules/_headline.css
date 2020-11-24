@@ -28,4 +28,8 @@
             max-width: 35rem;
         }
     }
+
+    &--margin-b {
+        margin-bottom: 1.8rem;
+    }
 }

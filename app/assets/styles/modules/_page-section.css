@@ -1,14 +1,51 @@
 .page-section {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    .row:nth-child(1) {
+        margin-top: 0;
+    }
+
+    .row:last-child {
+        margin-bottom: 0;
+    }
 
     @mixin atSmall {
-        padding-top: 4.5rem;
-        padding-bottom: 4.5rem;
+        padding-top: 6.5rem;
+        padding-bottom: 6.5rem;
     }
 
     &--blue {
         background-color: $mainBlue;
         color: #ffffff;
     }
+}
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+
+    @mixin atMedium {
+        display: block;
+    }
+
+
+    &__icon {
+        @mixin atMedium {
+            display: inline;
+            transform: translate(-20%, 15%);
+        }
+    }
+
+    &__title {
+        font-weight: 300;
+        font-size: 4rem;
+    
+        strong {
+            font-weight: 700;
+        }
+    }
+
 }
