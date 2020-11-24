@@ -23,6 +23,10 @@
 
     &--testimonials {
         background-color: #e0e6ef;
+
+        @mixin atLarge {
+            background: url('/app/assets/images/testimonials-bg.jpg') top center;
+        }
     }
 }
 
@@ -41,6 +45,13 @@
         @mixin atMedium {
             display: inline;
             transform: translate(-20%, 15%);
+        }
+
+        &--m-slide-down {
+
+            @mixin atMedium {
+                transform: translate(-20%, 30%);
+            }
         }
     }
 
