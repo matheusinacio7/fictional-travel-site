@@ -1,0 +1,16 @@
+.btn {
+    background-color: $mainBlue;
+    padding: 1.2rem 2rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+
+    &--orange {
+        background-color: $mainOrange;
+    }
+
+    &--large {
+        font-size: 2rem;
+        padding: 2rem 2.5rem;
+    }
+}

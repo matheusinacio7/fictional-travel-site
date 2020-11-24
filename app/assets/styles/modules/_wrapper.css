@@ -1,0 +1,18 @@
+.wrapper {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+
+    &-banner {
+        margin-right: -2.5rem;
+        margin-left: -2.5rem;
+
+        @mixin atMedium {
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+}

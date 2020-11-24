@@ -1,0 +1,20 @@
+.col {
+    flex: 1;
+
+    &-m-4 {
+        @mixin atMedium {
+            flex: 4;
+        }
+    }
+
+    &-m-8 {
+        @mixin atMedium {
+            flex: 8;
+        }
+    }
+
+    &--center {
+        display: flex;
+        justify-content: center;
+    }
+}

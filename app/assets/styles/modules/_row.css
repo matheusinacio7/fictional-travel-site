@@ -1,0 +1,40 @@
+.row {
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+    @mixin atMedium {
+        margin-top: 3.5em;
+        margin-bottom: 3.5em;
+    }
+
+    &--m {
+        @mixin atMedium {
+            .col {
+                margin-right: 5em;
+            }
+        }
+
+        @mixin atMedium {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+
+
+    .col:last-child {
+        margin-right: 0;
+    }
+
+    &--u-narrow-top {
+        margin-top: 0;
+    }
+
+    &--narrow-top {
+        margin-top: 1em;
+    }
+
+    &--thick-bottom {
+        margin-bottom: 3em;
+    }
+}
