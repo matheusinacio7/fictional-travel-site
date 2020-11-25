@@ -23,6 +23,7 @@
     "css-loader": "^5.0.1",
     "lodash": "^4.17.20",
     "normalize.css": "^8.0.1",
+    "postcss-hexrgba": "^2.0.1",
     "postcss-import": "^13.0.0",
     "postcss-loader": "^4.1.0",
     "postcss-mixins": "^6.2.3",
