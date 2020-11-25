@@ -11,6 +11,10 @@
     &__bar {
         display: none;
 
+        &--visible {
+            display: block;
+        }
+
         @mixin atMedium {
             display: flex;
             justify-content: flex-end;
