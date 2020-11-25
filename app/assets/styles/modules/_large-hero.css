@@ -1,12 +1,13 @@
 .large-hero {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     position: relative;
     border-bottom: 1rem solid $mainBlue;
 
     @mixin atMedium {
         border-bottom: 1.5rem solid $mainBlue;
+        align-items: center;
     }
 
     &__text-content {
@@ -15,6 +16,11 @@
         align-items: center;
         position: absolute;
         flex-direction: column;
+        margin-bottom: 2em;
+        
+        @mixin atMedium {
+            margin-bottom: 0;
+        }
     }
 
     &__title {
@@ -48,7 +54,7 @@
         font-size: 2rem;
         max-width: 50rem;
         text-shadow: 2px 2px 0 rgba(0,0,0, 0.25);
-        margin: 3rem 0;
+        margin: 2rem 0;
 
         @mixin atSmall {
             font-size: 2.5rem;
