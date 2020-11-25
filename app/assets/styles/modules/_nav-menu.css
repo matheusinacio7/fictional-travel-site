@@ -1,0 +1,16 @@
+.nav-menu {
+    order: 1;
+    ul {
+        list-style: none;
+        display: flex;
+
+        li {
+            margin-left: 1.5em;
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+    }
+}
