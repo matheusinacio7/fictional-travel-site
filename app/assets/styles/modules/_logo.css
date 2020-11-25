@@ -1,8 +1,10 @@
 .logo {
     background-color: $mainBlue;
     padding: 1em 2em;
+    scale: 0.6;
 
     @mixin atMedium {
         position: absolute;
+        scale: 1;
     }
 }

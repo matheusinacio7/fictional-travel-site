@@ -17,6 +17,7 @@ class MobileMenu {
     toggleMenu(){
         this.menuBar.classList.toggle("header__bar--visible");
         this.header.classList.toggle("header--expanded");
+        this.menuIcon.classList.toggle("header__icon--X");
     }
 }
 
