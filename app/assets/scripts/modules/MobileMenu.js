@@ -7,6 +7,7 @@ class MobileMenu {
     setVariables(){
         this.menuIcon = document.querySelector(".header__icon");
         this.menuBar = document.querySelector(".header__bar");
+        this.header = document.querySelector(".header");
     }
 
     setEventHandlers(){
@@ -15,6 +16,7 @@ class MobileMenu {
 
     toggleMenu(){
         this.menuBar.classList.toggle("header__bar--visible");
+        this.header.classList.toggle("header--expanded");
     }
 }
 

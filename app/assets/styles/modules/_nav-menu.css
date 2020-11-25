@@ -1,11 +1,41 @@
 .nav-menu {
     order: 1;
+    margin-top: 2em;
+    margin-bottom: 1em;
+
+    @mixin atMedium{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
     ul {
         list-style: none;
         display: flex;
+        padding: 0;
 
         li {
-            margin-left: 1.5em;
+            flex: 1;
+            margin-left: 0;
+            margin-right: 0.4em;
+            background-color: rgba($mainBlue, 0.7);
+            padding: 1em 0.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+
+            @mixin atMedium {
+                margin-left: 1.5em;
+                background-color: transparent;
+                font-size: 1.6rem;
+                padding: 0;
+                margin-right: 0;
+                flex-basis: auto;
+            }
+        }
+
+        li:last-child{
+            margin-right: 0;
         }
 
         a {
