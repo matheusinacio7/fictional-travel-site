@@ -1,0 +1,21 @@
+.logo {
+    background-color: $mainBlue;
+    padding: 1em 2em;
+    scale: 0.6;
+    transform: translateY(-32%);
+    transition: 800ms;
+    cursor: pointer;
+
+    @mixin atMedium {
+        position: absolute;
+        scale: 1;
+        transform: translateY(-10%);
+    }
+
+    &--minimized {
+        @mixin atMedium {
+            scale: 0.65;
+            transform: translateY(-35%);
+        }
+    }
+}

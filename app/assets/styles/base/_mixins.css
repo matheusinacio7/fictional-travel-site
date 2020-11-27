@@ -15,3 +15,12 @@
         @mixin-content;
     }
 }
+
+@define-mixin iconBar {
+    display: block;
+    width: 28px;
+    height: 4px;
+    background-color: #ffffff;
+    position: absolute;
+    transition: 300ms ease-out;
+}
