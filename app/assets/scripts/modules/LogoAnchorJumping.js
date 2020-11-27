@@ -6,7 +6,6 @@ class LogoAnchorJumping {
 
     setVariables(){
         this.logo = document.querySelector('.logo');
-        this.largeHeroSection = document.querySelector('.large-hero');
     }
 
     setEventHandlers(){
@@ -14,7 +13,7 @@ class LogoAnchorJumping {
     }
 
     jumpToStart(){
-        location.hash = this.largeHeroSection.id;
+        location.hash = '#';
     }
 }
 

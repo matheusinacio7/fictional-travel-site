@@ -1,0 +1,19 @@
+.social-icons {
+
+    &__icon {
+        background-color: $mainBlue;
+        display: inline-block;
+        margin: 0 0.5em;
+        height: 75px;
+        width: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 500ms;
+
+        &:hover {
+            background-color: $mainOrange;
+        }
+
+    }
+}
