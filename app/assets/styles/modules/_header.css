@@ -40,11 +40,13 @@
         text-align: center;
         scale: 1.2;
         transition: 800ms;
+        visibility: hidden;
 
         &--visible {
             opacity: 1;
             z-index: 0;
             scale: 1;
+            visibility: visible;
         }
 
         @mixin atMedium {
@@ -55,6 +57,7 @@
             align-items: center;
             margin-top: 0;
             z-index: 0;
+            visibility: visible;
         }
     }
 
