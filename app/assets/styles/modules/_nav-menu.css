@@ -39,8 +39,15 @@
         }
 
         a {
-            color: #ffffff;
             text-decoration: none;
         }
+    }
+
+    &__item {
+        color: #ffffff
+    }
+
+    &__active-item {
+        color: $activeOrange;
     }
 }
