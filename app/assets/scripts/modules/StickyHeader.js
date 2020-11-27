@@ -9,10 +9,11 @@ class StickyHeader {
     }
 
     setVariables(){
-
         this.backgroundBar = document.querySelector('.header__background-bar');
         this.isBackgroundBarVisible = false;
         this.pageSections = document.querySelectorAll('.page-section');
+        this.logo = document.querySelector('.logo');
+        this.isLogoMinimized = false;
 
         this.sectionDictionary = {};
 
@@ -36,6 +37,8 @@ class StickyHeader {
 
     scrollEventDispatcher() {
         this.toggleBackgroundBar();
+        this.toggleLogoSizing();
+
         let currentScroll = window.scrollY;
         let dict = this.sectionDictionary;
 
@@ -70,10 +73,6 @@ class StickyHeader {
                 this.sectionDictionary[`${section.id}`].minScrollRange = minScroll;
             }, 10);
         });
-
-        setTimeout(() => {
-            console.log(this.sectionDictionary);
-        }, 100);
     }
 
     toggleBackgroundBar() {
@@ -84,6 +83,16 @@ class StickyHeader {
         } else if (!this.isBackgroundBarVisible && window.scrollY > 20) {
             this.isBackgroundBarVisible = true;
             this.backgroundBar.classList.add('header__background-bar--visible');
+        }
+    }
+
+    toggleLogoSizing() {
+        if(!this.isLogoMinimized && window.scrollY > 50) {
+            this.logo.classList.add('logo--minimized');
+            this.isLogoMinimized = true;
+        } else if (this.isLogoMinimized && window.scrollY < 50) {
+            this.logo.classList.remove('logo--minimized');
+            this.isLogoMinimized = false;
         }
     }
 
