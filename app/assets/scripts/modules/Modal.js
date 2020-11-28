@@ -7,17 +7,11 @@ class Modal {
 
     setVariables(){
         this.modal = document.querySelector('.modal');
-        this.openModalButtons = document.querySelectorAll('.modal__open');
         this.closeModalButton = document.querySelector('.modal__close');
     }
 
     setEventHandlers(){
-        this.openModalButtons.forEach(btn => {
-            btn.addEventListener('click', e => this.openModal(e));
-        });
-
         this.closeModalButton.addEventListener('click', () => this.closeModal());
-
     }
 
     injectHTML(){
@@ -59,7 +53,6 @@ class Modal {
     }
 
     openModal(e) {
-        e.preventDefault();
         this.modal.classList.add('modal--visible');
     }
 
