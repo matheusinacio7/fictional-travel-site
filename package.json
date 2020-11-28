@@ -21,6 +21,7 @@
   "dependencies": {
     "autoprefixer": "^10.0.2",
     "css-loader": "^5.0.1",
+    "lazysizes": "^5.2.2",
     "lodash": "^4.17.20",
     "normalize.css": "^8.0.1",
     "postcss-hexrgba": "^2.0.1",
