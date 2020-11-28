@@ -5,6 +5,16 @@
     height: 100%;
     background-color: rgba(255,255,255,0.95);
     z-index: 20;
+    opacity: 0;
+    visibility: hidden;
+    scale: 1.2;
+    transition: opacity 500ms, scale 500ms, visibility 500ms;
+
+    &--visible {
+        opacity: 1;
+        scale: 1;
+        visibility: visible;
+    }
 
     &__title {
         user-select: none;

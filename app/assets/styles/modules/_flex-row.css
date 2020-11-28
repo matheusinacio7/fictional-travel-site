@@ -1,0 +1,22 @@
+.flex-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 100%;
+
+    &--2a-4s {
+        flex-shrink: 3;
+        flex-wrap: wrap;
+        align-content: center;
+        width:70%;
+
+        .flex-col {
+            flex: 50%;
+
+            @mixin atSmall {
+                flex: 25%;
+            }
+        }
+    }
+}
