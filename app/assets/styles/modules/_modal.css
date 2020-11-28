@@ -1,0 +1,70 @@
+.modal {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.95);
+    z-index: 20;
+    opacity: 0;
+    visibility: hidden;
+    scale: 1.2;
+    transition: opacity 500ms, scale 500ms, visibility 500ms;
+
+    &--visible {
+        opacity: 1;
+        scale: 1;
+        visibility: visible;
+    }
+
+    &__title {
+        user-select: none;
+        transition: color 500ms;
+
+        &:hover{
+            color: $mainOrange;
+
+            .cls-1 {
+                fill: $mainOrange;
+            }
+        }
+
+    }
+
+    &__content {
+        padding: 0 2em;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .cls-1 {
+            fill: $mainBlue;
+            transition: fill 500ms;
+        }
+
+        svg {
+            display: inline;
+            margin-right: 0.3em;
+            transform: translateY(15%);
+        }
+    }
+
+    &__close {
+        font-size: 3rem;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        transform: scaleX(125%);
+        transform-origin: 100% 0;
+        user-select: none;
+        cursor: pointer;
+        transition: color 500ms;
+
+        &:hover {
+            color: $mainOrange;
+        }
+    }
+}

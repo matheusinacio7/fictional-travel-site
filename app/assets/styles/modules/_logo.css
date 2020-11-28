@@ -5,6 +5,7 @@
     transform: translateY(-32%);
     transition: 800ms;
     cursor: pointer;
+    z-index: 7;
 
     @mixin atMedium {
         position: absolute;
