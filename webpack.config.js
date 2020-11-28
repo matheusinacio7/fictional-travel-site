@@ -17,7 +17,7 @@ const POST_CSS_PLUGINS = [
 class RunAfterCompile {
     apply(compiler) {
         compiler.hooks.done.tap('Copy images', () => {
-            fse.copySync('./app/assets/images', './dist/assets/images');
+            fse.copySync('./app/assets/images', './docs/assets/images');
         })
     }
 }
@@ -102,7 +102,7 @@ if (CURRENT_TASK == 'dev') {
     config.output = {
         filename: '[name].[chunkhash].js',
         chunkFilename: '[name].[chunkhash].js',
-        path: ROOT_PATH.resolve(__dirname, 'dist')
+        path: ROOT_PATH.resolve(__dirname, 'docs')
     };
 
     config.optimization = {
