@@ -56,16 +56,19 @@ let config = {
     module: {
         rules: [
             cssLoaderRules,
-            {
-                test: /\.(png|jpg)$/,
-                loader: 'url-loader',
-            },
         ],
     },
 };
 
 if (CURRENT_TASK == 'dev') {
     cssLoaderRules.use.unshift('style-loader');
+
+    config.module.rules.push(
+        {
+            test: /\.(png|jpg)$/,
+            loader: 'url-loader',
+        }
+    );
 
     config.output = {
         filename: 'bundled.js',
@@ -94,7 +97,15 @@ if (CURRENT_TASK == 'dev') {
                 presets: ['@babel/preset-env']
             },
         },
-    });
+    },
+    {
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader',
+        options: {
+            limit: false,
+        },
+    }
+    );
 
     cssLoaderRules.use.unshift(MINI_CSS_EXTRACT_PLUGIN.loader);
     POST_CSS_PLUGINS.push(require('cssnano'));
@@ -102,7 +113,8 @@ if (CURRENT_TASK == 'dev') {
     config.output = {
         filename: '[name].[chunkhash].js',
         chunkFilename: '[name].[chunkhash].js',
-        path: ROOT_PATH.resolve(__dirname, 'docs')
+        path: ROOT_PATH.resolve(__dirname, 'docs'),
+        publicPath: ''
     };
 
     config.optimization = {
