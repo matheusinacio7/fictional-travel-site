@@ -3,7 +3,7 @@ exports.handler = (event, context, callback) => {
   let password = "";
 
   if(event.body){
-    body = JSON.stringify(event.body);
+    body = JSON.parse(event.body);
     password = body.password;
   }
 
